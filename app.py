@@ -38,10 +38,10 @@ safety_settings = [
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # In production, replace with your actual frontend URL
+    allow_origins=["https://film-suma-rag-frontend-inky.vercel.app/"],
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["POST"],  # Restrict to needed methods
+    allow_headers=["Content-Type", "Authorization"]
 )
 
 class MovieName(BaseModel):
