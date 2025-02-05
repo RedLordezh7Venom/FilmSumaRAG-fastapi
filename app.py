@@ -70,7 +70,7 @@ async def generate_summary(chunks):
     # Process each chunk with Gemini
     summaries = []
     for chunk in chunks:
-        prompt = f"summarize this part of the joker movie and narrate it \n{chunk}"
+        prompt = f"summarize this part of the movie and narrate it \n{chunk}"
         response = model.generate_content(prompt,safety_settings=safety_settings,)
         print(response.text)
         summaries.append(response.text)
