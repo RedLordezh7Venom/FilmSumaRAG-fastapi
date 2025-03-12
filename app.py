@@ -14,7 +14,7 @@ load_dotenv()
 
 app = FastAPI()
 genai.configure(api_key=os.getenv('GEMINI_API_KEY'))
-model = genai.GenerativeModel('gemini-pro')
+model = genai.GenerativeModel('gemini-2.0-flash-lite')
 
 #enable some safety settings for full summary of movies
 safety_settings = [
@@ -70,7 +70,7 @@ async def generate_summary(chunks):
     # Process each chunk with Gemini
     summaries = []
     for chunk in chunks:
-        prompt = f"summarize this part of the movie and narrate it \n{chunk}"
+        prompt = f"You are tasked with summarizing movie for a website called Film -a Sum , summarize this part of the movie, only respond with summary text \n{chunk}"
         response = model.generate_content(prompt,safety_settings=safety_settings,)
         print(response.text)
         summaries.append(response.text)
