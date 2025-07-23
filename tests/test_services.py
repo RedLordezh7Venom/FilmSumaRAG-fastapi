@@ -1,4 +1,5 @@
 import pytest
+import os
 from unittest.mock import patch, mock_open
 from app.services.gemini_service import generate_summary
 from app.services.subtitle_service import get_movie_summary
