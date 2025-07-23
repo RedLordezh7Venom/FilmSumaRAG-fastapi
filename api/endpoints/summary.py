@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
-from app.models.movie import MovieName
-from app.services.subtitle_service import get_movie_summary
+from models.movie import MovieName
+from core.sub_to_summary import get_movie_summary
 
 router = APIRouter()
 
