@@ -1,14 +1,14 @@
 import pytest
 from fastapi.testclient import TestClient
-from main import app
-from models.movie import MovieName
+from src.main import app
+from src.models.movie import MovieName
 from unittest.mock import patch
 
 client = TestClient(app)
 
 @pytest.fixture
 def mock_get_movie_summary():
-    with patch('api.endpoints.summary.get_movie_summary') as mock:
+    with patch('src.api.endpoints.summary.get_movie_summary') as mock:
         yield mock
 
 def test_summarize_movie_success(mock_get_movie_summary):

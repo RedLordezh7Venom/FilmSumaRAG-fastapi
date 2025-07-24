@@ -1,7 +1,7 @@
-from utils.subliminalsubsdl import download_subs
-from utils.sub_preprocess import process as process_sub
-from utils.file_operations import detect_encoding, split_text_into_chunks, delete_files
-from core.llm_model import generate_summary
+from src.utils.subliminalsubsdl import download_subs
+from src.utils.sub_preprocess import process as process_sub
+from src.utils.file_operations import detect_encoding, split_text_into_chunks, delete_files
+from src.core.llm_model import generate_summary
 import os
 
 async def get_movie_summary(moviename: str):

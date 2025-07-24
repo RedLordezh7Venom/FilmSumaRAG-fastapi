@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from api.endpoints import summary
+from src.api.endpoints import summary
 
 app = FastAPI()
 

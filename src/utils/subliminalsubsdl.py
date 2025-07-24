@@ -1,6 +1,6 @@
 import subliminal
 from subliminal import save_subtitles, scan_video, download_best_subtitles,Video
-from utils.file_operations import delete_files
+from src.utils.file_operations import delete_files
 from babelfish import Language
 from pathlib import Path
 import os
